@@ -13,7 +13,7 @@
  4. webcam4.py is the playground/testing arena
 
 
- `pip install flask flask-socketio pillow opencv-python`
+ `pip install flask flask-socketio pillow opencv-python python-dotenv`
  
 - Analyze the emotions of the person in live webcam session.
 (frontend webcam analyzer )
