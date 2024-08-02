@@ -6,10 +6,9 @@ import random
 from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
 from PIL import Image
-import cv2
-import google.generativeai as genai
 from io import BytesIO
 import base64
+import google.generativeai as genai
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -60,7 +59,9 @@ def analyze_facial_expression(image):
             rate_limit_tokens -= 1
 
         try:
+            logging.info("Sending request to generative AI model.")
             response = model.generate_content([prompt, image])
+            logging.info(f"Received response: {response.text}")
             return response.text
         except Exception as e:
             with tokens_lock:
@@ -76,6 +77,7 @@ def analyze_facial_expression(image):
             else:
                 logging.error(f"An error occurred: {e}")
                 return None
+    logging.error("Failed to get a response after multiple retries.")
     return None
 
 def provide_feedback(analysis_result):
@@ -104,6 +106,7 @@ def index():
 
 @socketio.on('analyze_frame')
 def handle_analyze_frame(data_image):
+    logging.info("Received frame for analysis.")
     frame_data = data_image.split(",")[1]
     image_data = base64.b64decode(frame_data)
     image = Image.open(BytesIO(image_data))
@@ -113,8 +116,10 @@ def handle_analyze_frame(data_image):
     if analysis_result:
         feedback = provide_feedback(analysis_result)
         emit('feedback', {'feedback': feedback})
+        logging.info(f"Feedback sent: {feedback}")
     else:
         emit('feedback', {'feedback': "Error analyzing the frame."})
+        logging.error("Error analyzing the frame.")
 
 if __name__ == "__main__":
     socketio.run(app, debug=True)
