@@ -13,9 +13,15 @@
  4. webcam4.py is the playground/testing arena
 
 
- `pip install flask flask-socketio pillow opencv-python python-dotenv`
- 
 - Analyze the emotions of the person in live webcam session.
-(frontend webcam analyzer )
- 
+(fronte webcam analyzer)
+
+Install FastAPI and Uvicorn
+ 1. `pip install fastapi uvicorn`
+Install React
+ 2. `npx create-react-app my-react-app`
+     `cd my-react-app`
+Backend:
+ 3. 
+
 
