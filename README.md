@@ -13,8 +13,8 @@
  4. webcam4.py is the playground/testing arena
 
 
-- Analyze the emotions of the person in live webcam session.
-(fastapi react)
+- An example of basic fastapi react setup
+(fastapi react basic setup)
 
 - BACKEND (FastAPI)
 1. Install FastAPI and Uvicorn
