@@ -1,8 +1,10 @@
-# emotion_analyzer is a collection of various approaches to recognize human emotions
+# Emotion_analyzer is a collection of various approaches to recognize human emotions
 `pip install google-generativeai pillow opencv-python time`
  
 **Analyze the emotions of the person based on the image or video** 
 **(image and video analyzer).**
+
+1. Upload image or video to colab
 
 **Analyze the emotions of the person in live webcam session.**
 **(webcam analyzer)**
