@@ -1,11 +1,11 @@
-# emotion_analyzer
+# emotion_analyzer is a collection of various approaches to recognize human emotions
 `pip install google-generativeai pillow opencv-python time`
  
-- Analyze the emotions of the person based on the image or video 
-(image and video analyzer).
+**Analyze the emotions of the person based on the image or video** 
+**(image and video analyzer).**
 
-- Analyze the emotions of the person in live webcam session.
-(webcam analyzer)
+**Analyze the emotions of the person in live webcam session.**
+**(webcam analyzer)**
 
  1. Emotion analyzer.ipynb is for image/video analysis
  2. webcam1.py is initial approach to analyze real-time emotions during the live webcam session
@@ -13,7 +13,7 @@
  4. webcam4.py is the playground/testing arena
 
 
-- An example of basic fastapi react setup, **no face analyze here!**
+**An example of basic fastapi react setup, no face analisys here!**
 (fastapi react basic setup)
 
 - BACKEND (FastAPI)
