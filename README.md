@@ -13,7 +13,7 @@
  4. webcam4.py is the playground/testing arena
 
 
-- An example of basic fastapi react setup
+- An example of basic fastapi react setup, **no face analyze here!**
 (fastapi react basic setup)
 
 - BACKEND (FastAPI)
