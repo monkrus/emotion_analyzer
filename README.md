@@ -37,5 +37,7 @@
 `npm start`
 6. Open a browser and navigate to http://localhost:3000. 
 
-
+**An example of fastapi react setup using Micorsoft Azure Face resource**
+`pip install fastapi uvicorn aiohttp`
+Follow the backend and frontend steps in the previous example.
 
